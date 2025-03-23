@@ -10,7 +10,14 @@ function templateHtmlRender(i) {
     return /*html*/`
         <div class="menu_steaks">
             <div class="steak_name">
-                 <h2>${Steaks[i].name}</h2>
+                <h2>${Steaks[i].name}</h2>
+                <img id="addMenu" class="plus_logo" src="./img/plus.png" alt="">
+            </div>
+            <div class="steak_info">
+                <h3>Herkunft ${Steaks[i].info}</h3>
+            </div>
+            <div>
+                <h4>${Steaks[i].amount} x ${Steaks[i].weight} g - ${Steaks[i].price.toFixed(2)} €</h4>
             </div>
         </div>
     `

@@ -129,13 +129,26 @@ footer img {
 
 #content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: rgb(78, 1, 1);
+    flex-direction: column;
+    background-color: rgba(169, 2, 2, 0.700);
+    
 }
 
 .menu_steaks {
+    border: solid 1px;
+    box-shadow: 1px 3px 12px 0px;
+
+    padding-left: 20px;
+}
+
+.steak_name img {
+    height: 30px;
+    width: 30px;
+    padding-right: 20px;
     
+   
+}
+.steak_name {
+    display: flex;
+    justify-content: space-between;
 }
