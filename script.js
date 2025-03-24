@@ -34,8 +34,9 @@ function templateSteakRender(i) {
 
 function templateHtmlRenderWarenkorb(j) {
     return /*html*/`
+
         <div>
-            <p>${warenkorbAmounts[j]} x ${warenkorbMenus[j]}></p>
+            <p><p>-</p>${warenkorbAmounts[j]} x ${warenkorbMenus[j]}><p>+</p></p>
             <p>${(warenkorbPrices[j] * warenkorbAmounts[j]).toFixed(2)} €</p>
         </div>
     `

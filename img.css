@@ -1,0 +1,36 @@
+header img {
+    height: 50px;
+    padding-left: 20px;
+}
+
+.restaurant_image img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 20px 1px;
+}
+
+.logo_image img {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    margin-top: -75px;
+    box-shadow: 0px 0px 20px 1px;
+}
+
+.all_menu img {
+    padding-top: 20px;
+    height: 100px;
+    width: 100%;
+    object-fit:cover;
+}
+
+.steak_name img {
+    height: 30px;
+    width: 30px;
+    padding-right: 20px;
+}
+
+footer img {
+    height: 50px;
+}
