@@ -131,13 +131,18 @@ footer img {
     display: flex;
     flex-direction: column;
     background-color: rgba(169, 2, 2, 0.700);
+    color: rgb(213, 173, 173);
     
+}
+
+#content1 {
+    background-color: rgba(15, 12, 219, 0.115);
+    color: rgb(213, 173, 173);
 }
 
 .menu_steaks {
     border: solid 1px;
     box-shadow: 1px 3px 12px 0px;
-
     padding-left: 20px;
 }
 
@@ -152,3 +157,10 @@ footer img {
     display: flex;
     justify-content: space-between;
 }
+
+h3 {
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+
