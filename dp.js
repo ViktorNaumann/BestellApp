@@ -89,4 +89,6 @@ let fish = [
 ];
 
 
-let warenkorb = [];
+let warenkorbMenus = [];
+let warenkorbPrices = [];
+let warenkorbAmounts = []
