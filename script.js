@@ -1,7 +1,7 @@
 function menuRender() {
     let element = document.getElementById('content');
     for (let i = 0; i < Steaks.length; i++) {
-        element.innerHTML += templateSteakRender(i);
+        element.innerHTML += templateHtmlSteakRender(i);
     }
     
 }
@@ -12,10 +12,37 @@ function warenkorbRender() {
     for (let j = 0; j < warenkorbMenus.length; j++) {
         element.innerHTML += templateHtmlRenderWarenkorb(j);
     }
-
+    resultRender();
 }
 
-function templateSteakRender(i) {
+function resultRender() {
+    let resultContent = document.getElementById('result_content');
+    let result = 0;
+    for (let index = 0; index < warenkorbPrices.length; index++) {
+        result += warenkorbPrices[index]*warenkorbAmounts[index];
+    }
+    let lieferkosten = 9.90;
+    let gesamt = result + lieferkosten;
+    
+    if (warenkorbMenus.length == 0) {
+        resultContent.innerHTML = "";
+    }else {
+        resultContent.innerHTML = templateHtmlResultRender(result, lieferkosten, gesamt);
+    }
+}
+
+function templateHtmlResultRender(result, lieferkosten, gesamt) {
+    return /*html*/`
+        <div class="result_content">
+            <div class="line"></div>
+            <ins>Zwischensumme: <span>${result.toFixed(2)} €</span></ins>
+            <ins>Lieferkosten: <span>${lieferkosten.toFixed(2)} €</span></ins>
+            <ins><b>Gesamt: <span>${gesamt.toFixed(2)} €</span></b></ins>
+        </div>
+    `
+}
+
+function templateHtmlSteakRender(i) {
     return /*html*/`
         <div class="menu_steaks">
             <div class="steak_name">
@@ -34,7 +61,7 @@ function templateSteakRender(i) {
 
 function templateHtmlRenderWarenkorb(j) {
     return /*html*/`
-        <div><p>${warenkorbMenus[j]}</p></div>
+        <div><h4>${warenkorbMenus[j]}</h4></div>
         <div class="menus_price">
             <p><p onclick="deleteAmount(${j})">-</p> ${warenkorbAmounts[j]} <p onclick="addAmount(${j})">+</p></p>
             <ins>${(warenkorbPrices[j] * warenkorbAmounts[j]).toFixed(2)} €</ins>
@@ -63,8 +90,6 @@ function deleteAll(j) {
     warenkorbAmounts.splice(j, 1);
     warenkorbRender();
 }
-
-
 
 function getMenuIndex(menuName) {
     return warenkorbMenus.indexOf(menuName);

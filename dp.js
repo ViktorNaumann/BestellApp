@@ -43,6 +43,10 @@ let Steaks = [
     }
 ];
 
+let warenkorbMenus = [];
+let warenkorbPrices = [];
+let warenkorbAmounts = []
+
 let fish = [
     {
         "name": "Lachsfilet",
@@ -89,6 +93,3 @@ let fish = [
 ];
 
 
-let warenkorbMenus = [];
-let warenkorbPrices = [];
-let warenkorbAmounts = []

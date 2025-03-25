@@ -75,6 +75,7 @@ footer {
     width: 100%;
     height: 1px;
     background-color: white;
+    margin-bottom: 20px;
 }
 
 .menus_price {
@@ -90,4 +91,11 @@ footer {
     height: 300px;
     overflow-y: auto;
 
+}
+
+.result_content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10px;
 }
