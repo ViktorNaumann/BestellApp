@@ -34,3 +34,7 @@ header img {
 footer img {
     height: 50px;
 }
+
+.delete_Menu {
+    cursor: pointer;
+}

@@ -76,3 +76,18 @@ footer {
     height: 1px;
     background-color: white;
 }
+
+.menus_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 10px;
+    
+}
+
+#warenkorb_content {
+    height: 300px;
+    overflow-y: auto;
+
+}
