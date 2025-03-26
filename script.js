@@ -40,7 +40,7 @@ function templateHtmlResultRender(result, lieferkosten, gesamt) {
             <ins><b>Gesamt: <span>${gesamt.toFixed(2)} €</span></b></ins>
         </div>
         <div class="pay-button">
-            <button class="btn">
+            <button onclick="toggleOverlay(); deleteAll()" class="btn">
                  Bezahlen
             </button>
         </div>
@@ -111,4 +111,19 @@ function addMenu(menuName, menuPrice) {
         warenkorbAmounts[index]++;
     }
     warenkorbRender();
+}
+
+function toggleOverlay() {
+    let overlayRef = document.getElementById('overlay');
+    let dialogBoxes = document.getElementsByClassName("dialog-box");
+    
+    if (dialogBoxes.length > 0) {
+        let dialogBox = dialogBoxes[0];
+    
+        dialogBox.onclick = function (event) {    // Verhindert, dass ein Klick innerhalb des Dialogfelds das Overlay schließt
+            event.stopPropagation();
+        };
+    }
+
+    overlayRef.classList.toggle('d_none'); // Hide/Show
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bestellapp</title>
+    <title>BestellApp</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./basket.css">
     <link rel="stylesheet" href="./img.css">
@@ -12,6 +12,21 @@
     <script src="./script.js"></script>
 </head>
 <body onload="menuRender()">
+
+    <div onclick="toggleOverlay()" id="overlay" class="overlay d_none">
+
+        <div class="dialog-field">
+
+            <div class="dialog-box" onclick="toggleOverlay()">
+                <h5>Vielen Dank für Ihre Bestelleung!
+                Ihre Lieferung ist voraussichtlich in ca. 30 Minuten bei Ihnen.</h5>
+                <button class="btn1" onclick="toggleOverlay()">Schließen</button>
+            </div>
+
+        </div>
+
+    </div>
+
     <header>
         <img src="./img/Logo/Bestell App- Logo.svg" alt="">
     </header>

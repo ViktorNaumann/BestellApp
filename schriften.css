@@ -1,5 +1,5 @@
 h1 {
-    font-size: 35px;
+    font-size: clamp(1rem, 0.6607rem + 1.6964vw, 2.1875rem);
     padding-left: 20px;
 
 }
@@ -18,7 +18,7 @@ a {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    font-size: 24px;
+    font-size: clamp(0.75rem, 0.5357rem + 1.0714vw, 1.5rem);
     font-weight: 600;
     padding-left: 120px;
  
