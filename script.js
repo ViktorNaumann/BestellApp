@@ -39,6 +39,11 @@ function templateHtmlResultRender(result, lieferkosten, gesamt) {
             <ins>Lieferkosten: <span>${lieferkosten.toFixed(2)} €</span></ins>
             <ins><b>Gesamt: <span>${gesamt.toFixed(2)} €</span></b></ins>
         </div>
+        <div class="pay-button">
+            <button class="btn">
+                 Bezahlen
+            </button>
+        </div>
     `
 }
 
