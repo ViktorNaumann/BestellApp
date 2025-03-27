@@ -124,6 +124,20 @@ function toggleOverlay() {
             event.stopPropagation();
         };
     }
-
     overlayRef.classList.toggle('d_none'); // Hide/Show
 }
+
+function toggleBasketOverlay() {
+    document.getElementById("basket_overlay").classList.toggle("d_none");
+    document.getElementById("basket_rapper_overlay").classList.toggle("hoppel");
+}
+
+function stopMove(event) {
+    event.stopPropagation();
+}
+
+
+
+
+
+

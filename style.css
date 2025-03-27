@@ -10,7 +10,6 @@ body {
     min-width: 320px;
     display: flex;
     flex-direction: column;
-    
 }
 
 header {
@@ -32,10 +31,6 @@ header {
 
 .logo_image {
     padding-left: 100px;
-}
-
-.content {
-    width: calc(100% - 300px);
 }
 
 footer {
@@ -133,7 +128,7 @@ footer {
   }
 
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -211,4 +206,3 @@ footer {
     -webkit-transition: 100ms;
     transition: 100ms;
   }
-  

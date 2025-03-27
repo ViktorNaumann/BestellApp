@@ -45,7 +45,7 @@
                 <h1>Hamburgs Steak House</h1>
             </section>
         
-            <section>
+            <section class="navLink">
                 <span>Bewertung (4.9 von 5 Sternen)</span><br><br>
                 <a href="navLink">Steak</a>
                 <a href="navLink">Fisch</a>
@@ -84,7 +84,7 @@
             </section>
 
         </div>
-        <div class="basket_wrapper">
+        <div id="basket_rapper_overlay" class="basket_wrapper hoppel">
             <div class="basket">
                 <h2>Warenkorb</h2>
                 <div class="line"></div>
@@ -93,8 +93,12 @@
                 
             </div>
         </div>
-
     </div>
+
+    <button class="basket_button d_none" onclick="toggleBasketOverlay()"> Warenkorb anzeigen</button>
+
+            <div id="basket_overlay" class="overlay d_none" onclick="toggleBasketOverlay()">
+            </div>
 
 </body>
 
