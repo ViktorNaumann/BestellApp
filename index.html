@@ -47,11 +47,14 @@
         
             <section class="navLink">
                 <span>Bewertung (4.9 von 5 Sternen)</span><br><br>
+                <div>
                 <a href="navLink">Steak</a>
                 <a href="navLink">Fisch</a>
                 <a href="navLink">Salat</a>
                 <a href="navLink">Dessert</a>
                 <a href="navLink">Getränke</a>
+                </div>
+                
             </section>
 
             <section class="all_menu">
@@ -84,8 +87,8 @@
             </section>
 
         </div>
-        <div id="basket_rapper_overlay" class="basket_wrapper hoppel">
-            <div class="basket">
+        <div id="basket_rapper_overlay" class="basket_wrapper hoppel" onclick="toggleBasketOverlay()">
+            <div class="basket" onclick="toggleBasketOverlay()">
                 <h2>Warenkorb</h2>
                 <div class="line"></div>
                 <div id="warenkorb_content"></div>
@@ -95,7 +98,7 @@
         </div>
     </div>
 
-    <button class="basket_button d_none" onclick="toggleBasketOverlay()"> Warenkorb anzeigen</button>
+    <button class="basket_button d_none" onclick="toggleBasketOverlay()"> Warenkorb anzeigen <span>0.00 €</span></button>
 
             <div id="basket_overlay" class="overlay d_none" onclick="toggleBasketOverlay()">
             </div>

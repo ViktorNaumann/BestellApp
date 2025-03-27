@@ -29,6 +29,11 @@ function resultRender() {
     }else {
         resultContent.innerHTML = templateHtmlResultRender(result, lieferkosten, gesamt);
     }
+
+    let basketButton = document.querySelector('.basket_button span');
+    if (basketButton) {
+        basketButton.textContent = `${gesamt.toFixed(2)} €`;
+    }
 }
 
 function templateHtmlResultRender(result, lieferkosten, gesamt) {
@@ -40,8 +45,8 @@ function templateHtmlResultRender(result, lieferkosten, gesamt) {
             <ins><b>Gesamt: <span>${gesamt.toFixed(2)} €</span></b></ins>
         </div>
         <div class="pay-button">
-            <button onclick="toggleOverlay(); deleteAll()" class="btn">
-                 Bezahlen
+            <button onclick="toggleOverlay(); deleteAll()";  class="btn">
+                 Bestellen <span>${gesamt.toFixed(2)} €</span>
             </button>
         </div>
     `
@@ -90,10 +95,12 @@ function addAmount(j) {
 }
 
 function deleteAll(j) {
-    warenkorbMenus.splice(j, 1);
-    warenkorbPrices.splice(j, 1);
-    warenkorbAmounts.splice(j, 1);
+    warenkorbMenus = [];
+    warenkorbPrices = [];
+    warenkorbAmounts = [];
     warenkorbRender();
+    
+
 }
 
 function getMenuIndex(menuName) {

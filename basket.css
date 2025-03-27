@@ -5,6 +5,18 @@
     position: relative;
 }
 
+@media(max-width: 800px) {
+    .basket_wrapper {
+        width: 100%;
+    }
+
+    .basket {
+        width: 300px !important;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.968) !important;
+    }
+}
+
 .content_wrapper {
     display: flex;
 }
@@ -42,10 +54,7 @@
     .basket_wrapper {
         position: fixed;
         z-index: +1;
-        background-color: black;
     }
-
-    
 
     .hoppel {
         display: none;
@@ -65,6 +74,7 @@
         display: none;
     }
 }
+
 
 
 

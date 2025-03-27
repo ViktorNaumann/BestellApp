@@ -20,15 +20,9 @@ a {
     cursor: pointer;
     font-size: clamp(0.75rem, 0.5357rem + 1.0714vw, 1.5rem);
     font-weight: 600;
-    padding-left: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
  }
-
- @media (max-width: 700px) {
-    a {
-       
-    }
- }
-
 
  span {
     color: gold;
