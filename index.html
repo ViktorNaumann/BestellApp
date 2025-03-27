@@ -12,39 +12,29 @@
     <script src="./script.js"></script>
 </head>
 <body onload="menuRender()">
-
     <div onclick="toggleOverlay()" id="overlay" class="overlay d_none">
-
         <div class="dialog-field">
-
             <div class="dialog-box" onclick="toggleOverlay()">
                 <h5>Vielen Dank für Ihre Bestelleung!
                 Ihre Lieferung ist voraussichtlich in ca. 30 Minuten bei Ihnen.</h5>
                 <button class="btn1" onclick="toggleOverlay()">Schließen</button>
             </div>
-
         </div>
-
     </div>
-
     <header>
         <img src="./img/Logo/Bestell App- Logo.svg" alt="">
     </header>
-
     <div class="content_wrapper">
         <div class="content">
-
             <section class="restaurant_image">
                 <img src="./img/smoke-small.jpg" alt="">
             </section>
-        
             <section class="logo_restaurant">
                 <div class="logo_image">
                     <img src="./img/Logo.png" alt="">
                 </div>
                 <h1>Hamburgs Steak House</h1>
             </section>
-        
             <section class="navLink">
                 <span>Bewertung (4.9 von 5 Sternen)</span><br><br>
                 <div>
@@ -54,38 +44,31 @@
                 <a href="navLink">Dessert</a>
                 <a href="navLink">Getränke</a>
                 </div>
-                
             </section>
-
             <section class="all_menu">
                 <img src="./img/steak-small.jpg" alt="">
                 <h2 class="menu_text">Steaks</h2>
                 <div id="content">
                 </div>
             </section>
-
             <section class="all_menu">
                 <img src="./img/fish-new.jpg" alt="">
                 <h2 class="menu_text">Fish</h2>
                 <div id="content1">
                 </div>
             </section>
-
             <section class="all_menu">
                 <img src="./img/salat.jpg" alt="">
                 <h2 class="menu_text">Salat</h2>
             </section>
-
             <section class="all_menu">
                 <img src="./img/desserts.jpg" alt="">
                 <h2 class="menu_text">Dessert</h2>
             </section>
-
             <section class="all_menu">
                 <img src="./img/getränke2big.png" alt="">
                 <h2 class="menu_text">Getränke</h2>
             </section>
-
         </div>
         <div id="basket_rapper_overlay" class="basket_wrapper hoppel" onclick="toggleBasketOverlay()">
             <div class="basket" onclick="toggleBasketOverlay()">
@@ -93,22 +76,13 @@
                 <div class="line"></div>
                 <div id="warenkorb_content"></div>
                 <div id="result_content"></div>
-                
             </div>
         </div>
     </div>
-
     <button class="basket_button d_none" onclick="toggleBasketOverlay()"> Warenkorb anzeigen <span>0.00 €</span></button>
-
-            <div id="basket_overlay" class="overlay d_none" onclick="toggleBasketOverlay()">
-            </div>
-
+            <div id="basket_overlay" class="overlay d_none" onclick="toggleBasketOverlay()"></div>
 </body>
-
 <footer>
     <img src="./img/Logo/Bestell App- Logo.svg" alt="">
 </footer>
-
-
-
 </html>

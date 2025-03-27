@@ -2,8 +2,7 @@ function menuRender() {
     let element = document.getElementById('content');
     for (let i = 0; i < Steaks.length; i++) {
         element.innerHTML += templateHtmlSteakRender(i);
-    }
-    
+    } 
 }
 
 function warenkorbRender() {
@@ -23,13 +22,11 @@ function resultRender() {
     }
     let lieferkosten = 9.90;
     let gesamt = result + lieferkosten;
-    
     if (warenkorbMenus.length == 0) {
         resultContent.innerHTML = "";
     }else {
         resultContent.innerHTML = templateHtmlResultRender(result, lieferkosten, gesamt);
     }
-
     let basketButton = document.querySelector('.basket_button span');
     if (basketButton) {
         basketButton.textContent = `${gesamt.toFixed(2)} €`;
@@ -109,7 +106,6 @@ function getMenuIndex(menuName) {
 
 function addMenu(menuName, menuPrice) {
     let index = getMenuIndex(menuName);
-
     if (index == -1) {
         warenkorbMenus.push(menuName);
         warenkorbPrices.push(menuPrice);
@@ -123,15 +119,13 @@ function addMenu(menuName, menuPrice) {
 function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
     let dialogBoxes = document.getElementsByClassName("dialog-box");
-    
     if (dialogBoxes.length > 0) {
         let dialogBox = dialogBoxes[0];
-    
-        dialogBox.onclick = function (event) {    // Verhindert, dass ein Klick innerhalb des Dialogfelds das Overlay schließt
+        dialogBox.onclick = function (event) {
             event.stopPropagation();
         };
     }
-    overlayRef.classList.toggle('d_none'); // Hide/Show
+    overlayRef.classList.toggle('d_none');
 }
 
 function toggleBasketOverlay() {
