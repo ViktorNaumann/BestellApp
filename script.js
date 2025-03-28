@@ -72,7 +72,7 @@ function templateHtmlRenderWarenkorb(j) {
         <div class="menus_price">
             <p><p onclick="deleteAmount(${j})">-</p> ${warenkorbAmounts[j]} <p onclick="addAmount(${j})">+</p></p>
             <ins>${(warenkorbPrices[j] * warenkorbAmounts[j]).toFixed(2)} €</ins>
-            <img class="delete_Menu" onclick="deleteAll(${j})" src="./img/mülleimer.png" height="40px" alt="deleteMenu">
+            <img class="delete_Menu" onclick="deleteMenu(${j})" src="./img/mülleimer.png" height="40px" alt="deleteMenu">
         </div>
     `
 }
@@ -81,7 +81,7 @@ function deleteAmount(j) {
     if (warenkorbAmounts[j] > 1) {
         warenkorbAmounts[j]--;
     } else {
-        deleteAll(j);
+        deleteMenu(j);
     }
     warenkorbRender();
 }
@@ -91,13 +91,18 @@ function addAmount(j) {
     warenkorbRender();
 }
 
+function deleteMenu(j) {
+    warenkorbMenus.splice(j,1);
+    warenkorbPrices.splice(j,1);
+    warenkorbAmounts.splice(j,1);
+    warenkorbRender();
+}
+
 function deleteAll(j) {
     warenkorbMenus = [];
     warenkorbPrices = [];
     warenkorbAmounts = [];
     warenkorbRender();
-    
-
 }
 
 function getMenuIndex(menuName) {
