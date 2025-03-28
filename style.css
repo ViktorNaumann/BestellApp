@@ -212,4 +212,9 @@ footer {
     cursor: pointer;
   }
 
+  .overlay {
+    z-index: +1;
+  } 
+
+
   

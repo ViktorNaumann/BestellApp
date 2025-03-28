@@ -67,13 +67,14 @@
     .basket {
         display: block;
     }
+ 
 }
 
 @media (min-width: 800px) {
     .basket_button {
         display: none;
-    }
-}
+    } 
+}    
 
 
 

@@ -42,7 +42,7 @@ function templateHtmlResultRender(result, lieferkosten, gesamt) {
             <ins><b>Gesamt: <span>${gesamt.toFixed(2)} €</span></b></ins>
         </div>
         <div class="pay-button">
-            <button onclick="toggleOverlay(); deleteAll()";  class="btn">
+            <button onclick="toggleBasketOverlay(); toggleOverlay(); deleteAll()";  class="btn">
                  Bestellen <span>${gesamt.toFixed(2)} €</span>
             </button>
         </div>
@@ -134,8 +134,8 @@ function toggleOverlay() {
 }
 
 function toggleBasketOverlay() {
-    document.getElementById("basket_overlay").classList.toggle("d_none");
     document.getElementById("basket_rapper_overlay").classList.toggle("hoppel");
+    document.getElementById("basket_overlay").classList.toggle("d_none");
 }
 
 function stopMove(event) {
